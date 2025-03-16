@@ -7,7 +7,7 @@ on:
 jobs:
   full:
     name: Node.js Latest Full
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
@@ -27,7 +27,7 @@ jobs:
         env:
           FORCE_COLOR: 2
   short:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         node-version:
@@ -53,7 +53,7 @@ jobs:
         env:
           FORCE_COLOR: 2
   old:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         node-version:
@@ -81,7 +81,7 @@ jobs:
           FORCE_COLOR: 2
   benchmark:
     name: Benchmark
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
